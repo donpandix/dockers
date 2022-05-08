@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  web:
+    container_name: http
+    image: donpandix/php:7.4
+    volumes:
+      - ./www:/var/www/html
+    ports: 
+      - "80:80"
+

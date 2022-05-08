@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  db:
+    container_name: azuresqledge
+    restart: always
+    image: mcr.microsoft.com/azure-sql-edge
+    volumes:
+     - ./dbdata:/var/opt/mssql
+    ports:
+     - "1433:1433"
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Password.1
