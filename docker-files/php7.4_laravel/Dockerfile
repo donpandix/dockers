@@ -37,3 +37,6 @@ RUN apt-get install -y --no-install-recommends default-mysql-client \
     && docker-php-ext-enable pdo_mysql
 
 COPY ./docker/vhost.conf /etc/apache2/sites-available/000-default.conf
+
+# Instala el composer dentro del ambiente
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
