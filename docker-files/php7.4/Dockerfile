@@ -1,5 +1,9 @@
 FROM php:7.4-apache
 
+USER root
+
+WORKDIR /var/www/html
+
 # Permite URL amigables
 RUN a2enmod rewrite
 
@@ -32,3 +36,5 @@ RUN apt-get install -y --no-install-recommends default-mysql-client \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-enable pdo_mysql
 
+# Instala composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
