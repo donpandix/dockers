@@ -1,6 +1,9 @@
-# dockers
-Plantillas y script para la creación de ambientes en Docker Desktop
+# Comando para ejecutar el archivo
 
-comando para cargar y ejecutar el ambiente 
+Instalar y/o iniciar el servicio
 
-`docker compose up -d`
+`docker compose -f docker-compose.ryl.yml up -d`
+
+Detener el servicio
+
+`docker compose -f docker-compose.ryl.yml stop`
