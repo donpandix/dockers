@@ -5,7 +5,7 @@ services:
     restart: always
     depends_on:
       - db
-    image: donpandix/php_laravel:7.4
+    image: donpandix/php:7.4
     volumes:
       - ./http_dolibar:/var/www/html
     ports: 
@@ -27,7 +27,7 @@ services:
     restart: always
     depends_on:
       - db
-    image: donpandix/php_laravel:8.1
+    image: donpandix/php_laravel:7.4
     volumes:
       - ./http_proxy:/var/www/html
     ports: 
