@@ -6,4 +6,4 @@ Instalar y/o iniciar el servicio
 
 Detener el servicio
 
-`docker compose -f docker-compose.ryl.yml stop`
+`docker compose -f docker-compose.ryl.yml down`
