@@ -2,8 +2,8 @@
 
 Instalar y/o iniciar el servicio
 
-`docker compose -f docker-compose.ryl.yml up -d`
+`docker compose -f docker-compose.<app>.yml up -d`
 
 Detener el servicio
 
-`docker compose -f docker-compose.ryl.yml down`
+`docker compose -f docker-compose.<app>.yml down`
