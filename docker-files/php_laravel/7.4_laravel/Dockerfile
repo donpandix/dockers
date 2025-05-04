@@ -36,6 +36,11 @@ RUN apt-get install -y --no-install-recommends default-mysql-client \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-enable pdo_mysql
 
+# Instala y habilita la extensión SOAP
+RUN apt-get install -y libxml2-dev \
+    && docker-php-ext-install soap \
+    && docker-php-ext-enable soap
+
 COPY ./docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 # Instala el composer dentro del ambiente
